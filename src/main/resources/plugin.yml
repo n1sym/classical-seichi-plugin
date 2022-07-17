@@ -1,0 +1,4 @@
+main: com.n1sym.seichi.Main
+name: Classical-Seichi-Plugin
+version: 0.1
+api-version: 1.19
