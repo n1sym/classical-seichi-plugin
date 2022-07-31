@@ -1,1 +1,12 @@
-reproduce classic seichi-server
+classic seichi plugin
+
+## 機能
+
+- 整地レベル
+- 範囲破壊スキル
+- 液体凝固スキル
+
+## 特徴
+
+- アイテムはデフォルトでドロップしない設定
+- 耐久無限ツールが初期配布される
