@@ -9,7 +9,7 @@ public class Range {
       range = range_2(direction);
     } else if (20 <= seichi_level && seichi_level < 30) {
       range = range_3(direction);
-    } else if (30 <= seichi_level && seichi_level < 30) {
+    } else if (30 <= seichi_level && seichi_level < 40) {
       range = range_4(direction);
     } else if (40 <= seichi_level) {
       range = range_5(direction);
