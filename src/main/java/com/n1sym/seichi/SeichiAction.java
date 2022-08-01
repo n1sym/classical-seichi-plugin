@@ -67,7 +67,7 @@ public class SeichiAction {
   private static boolean isOutsideTheWorld(Location location) {
     boolean bool = false;
     // ここは >= 1000 だったり >1000 だったりしそう
-    if (Math.abs(location.getX()) >= 1000 || Math.abs(location.getZ()) >= 1000) {
+    if (Math.abs(location.getX()) > 1000 || Math.abs(location.getZ()) > 1000) {
       bool = true;
     }
     return bool;
