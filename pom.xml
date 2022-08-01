@@ -5,11 +5,11 @@
 
   <groupId>com.n1sym.seichi</groupId>
   <artifactId>classical-seichi-plugin</artifactId>
-  <version>0.1</version>
+  <version>1</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>1.7</java.version>
+    <java.version>1.8</java.version>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <maven.compiler.source>${java.version}</maven.compiler.source>
   </properties>
