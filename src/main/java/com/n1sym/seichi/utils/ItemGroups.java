@@ -9,6 +9,7 @@ public class ItemGroups {
     if (block.getType() == Material.WATER ||
         block.getType() == Material.BUBBLE_COLUMN ||
         block.getType() == Material.KELP_PLANT ||
+        block.getType() == Material.KELP ||
         block.getType() == Material.SEAGRASS ||
         block.getType() == Material.TALL_SEAGRASS ||
         block.getType() == Material.POINTED_DRIPSTONE) {
