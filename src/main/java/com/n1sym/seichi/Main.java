@@ -10,8 +10,12 @@ import com.n1sym.seichi.listener.Login;
 import com.n1sym.seichi.listener.Logout;
 
 public class Main extends JavaPlugin {
+
+  private static Main instance;
+
   @Override
   public void onEnable() {
+    Main.instance = this;
     getLogger().info("整地プラグインを有効にしました。");
     this.getCommand("stick").setExecutor(new Stick());
     this.getServer().getPluginManager().registerEvents(new Login(), this);
@@ -19,5 +23,9 @@ public class Main extends JavaPlugin {
     this.getServer().getPluginManager().registerEvents(new InventoryClick(), this);
     this.getServer().getPluginManager().registerEvents(new InteractClick(), this);
     this.getServer().getPluginManager().registerEvents(new BlockBreak(), this);
+  }
+
+  public static Main getInstance() {
+    return instance;
   }
 }

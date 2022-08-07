@@ -5,6 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
 import com.n1sym.seichi.Bar;
+import com.n1sym.seichi.Scheduler;
 import com.n1sym.seichi.SeichiCountManager;
 import com.n1sym.seichi.repository.AccountNameRepository;
 import com.n1sym.seichi.repository.AccountRepository;
@@ -43,5 +44,7 @@ public class Login implements Listener {
     Bar.createSeichiBar(player);
     SeichiCountManager.set(player, count);
     SeichiCountManager.add(player, 0);
+    Scheduler sche = new Scheduler();
+    sche.setRepeatingTask(player);
   }
 }

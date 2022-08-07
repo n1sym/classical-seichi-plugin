@@ -1,8 +1,12 @@
 package com.n1sym.seichi;
 
+import java.util.UUID;
+
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.n1sym.seichi.repository.AccountRepository;
+import com.n1sym.seichi.repository.SeichiCountRepository;
 import com.n1sym.seichi.utils.Metadata;
 
 import net.kyori.adventure.text.Component;
@@ -53,6 +57,17 @@ public class SeichiCountManager {
     double base = (double)(next_count - prev_count);
     double progress = (double)((seichi_count - prev_count) / base);
     Bar.updateSeichiBar(seichi_level, seichi_count, next_count, player, progress);
+  }
+
+  public static void store(Player player){
+    UUID uuid = player.getUniqueId();
+    try {
+      Integer id = AccountRepository.find(uuid);
+      Integer count = player.getMetadata("seichi_count").get(0).asInt();
+      SeichiCountRepository.set(id, count);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 
   private static void sendSeichiLvUpMessage(Player player, int level) {
