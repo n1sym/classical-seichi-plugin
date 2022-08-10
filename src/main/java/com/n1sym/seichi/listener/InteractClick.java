@@ -25,11 +25,16 @@ public class InteractClick implements Listener {
     }
 
     // 凝固処理
+    int seichi_level = player.getMetadata("seichi_level").get(0).asInt();
+    int j_end = -4;
+    if (seichi_level >= 30) {
+      j_end = -6;
+    }
     if (item.getType() == Material.DIAMOND_HOE) {
       Location player_location = player.getLocation();
       Block block = player_location.getBlock();
       for (int i = -4; i <= 4; i++) {
-        for (int j = -4; j <= 0; j++) {
+        for (int j = j_end; j <= 0; j++) {
           for (int k = -4; k <= 4; k++) {
             Location location = block.getLocation();
             Block neighborhood_block = location.add(i, j, k).getBlock();
